@@ -1,0 +1,8 @@
+export PERSONAL=$HOME/.ubuntu/
+CONFIG=$PERSONAL/config
+for i in `find -L $CONFIG`; do
+    source $i
+done
+
+addToPathFront $PERSONAL/scripts
+addToPathFront $HOME/bin/netcoredbg

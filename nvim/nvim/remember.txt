@@ -1,0 +1,2 @@
+correct ubuntu neovim install
+ripgrep
