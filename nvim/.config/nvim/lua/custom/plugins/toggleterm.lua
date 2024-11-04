@@ -8,7 +8,7 @@ return {
 			"<leader>Tf",
 			function()
 				local count = vim.v.count1
-				require("toggleterm").toggle(count, 0, "float")
+				require("toggleterm").toggle(count, 0, vim.loop.cwd(), "float")
 			end,
 			desc = "ToggleTerm (float root_dir)",
 		},
@@ -16,7 +16,7 @@ return {
 			"<leader>Th",
 			function()
 				local count = vim.v.count1
-				require("toggleterm").toggle(count, 15, "horizontal")
+				require("toggleterm").toggle(count, 15, vim.loop.cwd(), "horizontal")
 			end,
 			desc = "ToggleTerm (horizontal root_dir)",
 		},
@@ -24,7 +24,7 @@ return {
 			"<leader>Tv",
 			function()
 				local count = vim.v.count1
-				require("toggleterm").toggle(count, vim.o.columns * 0.4, "vertical")
+				require("toggleterm").toggle(count, vim.o.columns * 0.4, vim.loop.cwd(), "vertical")
 			end,
 			desc = "ToggleTerm (vertical root_dir)",
 		},
