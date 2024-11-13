@@ -16,3 +16,8 @@ unzip "$TEMP_DIR/CascadiaCode.zip" -d "$TEMP_DIR"
 sudo mv "$TEMP_DIR"/*.{ttf,otf} /usr/local/share/fonts
 rm -rf "$TEMP_DIR"
 fc-cache -fv
+
+curl -Lo go1.23.3.linux-amd64.tar.gz https://go.dev/dl/go1.23.3.linux-amd64.tar.gz
+rm -rf /usr/local/go && tar -xzf go1.23.3.linux-amd64.tar.gz
+sudo mv go /usr/local/go
+rm go1.23.3.linux-amd64.tar.gz

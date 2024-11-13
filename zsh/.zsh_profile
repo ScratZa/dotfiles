@@ -6,3 +6,4 @@ done
 
 addToPathFront $PERSONAL/scripts
 addToPathFront $HOME/bin/netcoredbg
+addToPathFront /usr/local/go/bin
