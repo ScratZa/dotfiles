@@ -2,7 +2,7 @@
 
 # Super cool keyboard stuffs.
 # Required for x applications
-
+export STOW_FOLDERS="bin,nvim,tmux,ubuntu,zsh,oh-my-zsh"
 addToPath() {
     if [[ "$PATH" != *"$1"* ]]; then
         export PATH=$PATH:$1
@@ -13,4 +13,17 @@ addToPathFront() {
     if [[ "$PATH" != *"$1"* ]]; then
         export PATH=$1:$PATH
     fi
+}
+
+commitDotFiles() {
+    pushd $DOTFILES
+    pushd personal
+    git add .
+    git commit -m "Commit dotfiles"
+    git push origin master
+    popd
+    git add .
+    git commit -m "Commit dotfiles"
+    git push origin master
+    popd
 }
